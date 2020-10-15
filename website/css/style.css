@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+   
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+body {
+    margin:0;
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    color: lightsteelblue;
+    line-height: 1.6;
+}
+
+#mountain {
+    background-image: url("../images/sun-on-top-of-mountains-hd.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#mountain h1 {
+    font-size: 50px;
+    line-height: 1.2;
+}
+#mountain p {
+    font-size: 20px;
+}
+
+#mountain .button {
+    font-size: 18px;
+    text-decoration: none;
+    color: lightsteelblue;
+    border: lightsteelblue 1px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#mountain .button:hover {
+    background: lightsteelblue;
+    color: white;
+}
