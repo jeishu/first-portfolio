@@ -11,6 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+    background-color:rgba(0, 0, 0, 0.9);
     margin:0;
     font-family: 'Lora', serif;
     font-size: 17px;
@@ -18,28 +19,67 @@ body {
     line-height: 1.6;
 }
 
-#mountain {
+#mountain::after{
+    content: "";
+    height: 100vh;
+    width: 100%;
     background-image: url("../images/sun-on-top-of-mountains-hd.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
-    display:flex;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+}
+#mountain:hover::after {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+#mountain:hover .content h1{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    transition: all 2000ms;
+}
+#mountain:hover .content p{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    transition: all 3000ms;
+}
+
+header .content {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -145px;
+    width: 300px;
+    height: 350px;
+    text-align: center;
 }
 
-#mountain h1 {
-    font-size: 50px;
+.content h1 {
+    font-size: 2.2rem;
+    margin-top: 2rem;
+    font-weight: bold;
     line-height: 1.2;
 }
-#mountain p {
-    font-size: 20px;
+
+.content p {
+    font-size: 15px;
+    line-height: 1.2;
+    margin-top: 1rem;
 }
 
-#mountain .button {
+.content .button {
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     text-decoration: none;
     color: lightsteelblue;
@@ -49,7 +89,7 @@ body {
     margin-top: 20px;
 }
 
-#mountain .button:hover {
+.content .button:hover {
     background: lightsteelblue;
     color: white;
 }
