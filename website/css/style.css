@@ -38,12 +38,12 @@ body {
     -webkit-filter: blur(0px);
 }
 
-#mountain:hover .content h1{
+#mountain:hover .content h1 {
     filter: blur(2px);
     -webkit-filter: blur(2px);
-    transition: all 2000ms;
+    transition: all 2000ms; 
 }
-#mountain:hover .content p{
+#mountain:hover .content p {
     filter: blur(2px);
     -webkit-filter: blur(2px);
     transition: all 3000ms;
@@ -113,12 +113,49 @@ header .content {
     padding: 4rem 1rem;
 }
 
+.navbutton:hover {
+    cursor: pointer;
+    color: white;
+    transition: all 1000ms;
+}
 .navGrid {
     display:grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+/* information section */
 .info {
-    background:lightsteelblue;
+    background: lightslategray;
+    color: black;
+    padding: 50px 100px;
+    display: flex;
+}
+.info h2 {
+    font-weight: bold;
+    font-size: 50px;
+    
+}
+.info img {
+    max-width: 200px;
+    border: white 10px solid;
+    border-radius: 20px;
+}
+
+
+/* media queries */
+@media screen and (max-width: 768px) {
+    #mountain::after {
+        height: 50vh;;
+    }
+    header .content {
+        top: 5%;
+        margin-top: 5px;
+    }
+    header .content .button {
+        font-size: 9px;
+    }
+    .navGrid {
+        grid-template-columns: 1fr;
+    }
 }
