@@ -124,6 +124,14 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.navigationBar .navContainer a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: lightsteelblue;
+}
+
 /* About section */
 .about {
     background: lightslategray;
@@ -141,8 +149,8 @@ body {
 
 .about img {
     max-width: 200px;
-    border: white 10px solid;
-    border-radius: 50px;
+    border: lightcyan 5px solid;
+    border-radius: 100px;
 }
 
 .aboutWrapper {
@@ -248,11 +256,10 @@ body {
 
 /* Footer Section */
 footer {
-    padding: 50px;
+    padding: 2rem 1rem;
 }
 footer h4 {
     text-align: center;
-
 }
 
 /* media queries */
@@ -267,7 +274,7 @@ footer h4 {
     header .content .button {
         font-size: 9px;
     }
-    .navGrid {
-        grid-template-columns: 1fr;
+    .navGrid, .about, .projects, .contact, .resume {
+        grid-template-columns: 1fr 1fr;
     }
 }
