@@ -1,3 +1,7 @@
+:root{
+    --primColor: lightsteelblue; 
+}
+
 * {
     margin: 0;
     padding:0;
@@ -15,7 +19,7 @@ body {
     margin:0;
     font-family: 'Lora', serif;
     font-size: 17px;
-    color: lightsteelblue;
+    color: var(--primColor);
     line-height: 1.6;
 }
 
@@ -75,7 +79,7 @@ body {
     }
 
     .content p {
-        font-size: 15px;
+        font-size: 1.5rem;
         line-height: 1.2;
         margin-top: 1rem;
     }
@@ -85,7 +89,7 @@ body {
         font-family: 'Montserrat', sans-serif;
         font-size: 18px;
         text-decoration: none;
-        color: lightsteelblue;
+        color: var(--primColor);
         border: lightsteelblue 1px solid;
         padding: 10px 20px;
         border-radius: 100px;
@@ -115,13 +119,14 @@ body {
 
 .navbutton:hover {
     cursor: pointer;
-    color: white;
+    color: black;
     transition: all 1000ms;
 }
+
 .navGrid {
     display:grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 25% 25% 25% 25%;
+    column-gap: 1rem;
 }
 
 .navigationBar .navContainer a {
@@ -132,149 +137,80 @@ body {
     color: lightsteelblue;
 }
 
-/* About section */
-.about {
+/* Grid Container */
+.masterGrid {
+    display:grid;
+    grid-template-columns: 25% 5% 25% 45% ;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 30px;
     background: lightslategray;
-    color: black;
-    padding: 50px 100px;
-    /* temporary */
-    /* border: black 10px solid;
-    border-radius: 20px;
-    margin: 50px; */
+    padding: 20px;
 }
-.about h2 {
+
+.masterGrid .line {
+    background: black;
+    margin: 5px;
+    max-width: 5px;
+    border: black 1px solid;
+    border-radius: 100px;
+}
+
+.masterGrid h2 {
+    width: 30%;
+    margin: 20px;
     font-weight: bold;
     font-size: 50px;
 }
 
-.about img {
+.masterGrid p {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:black;
+}
+
+.masterGrid img {
     max-width: 200px;
+    margin: 20px;
     border: lightcyan 5px solid;
     border-radius: 100px;
+    
 }
 
-.aboutWrapper {
-    display: grid;
-    grid-template-columns: 1fr .50fr 1fr 3.75fr;
-}
-
-.aboutWrapper div {
-    background: black;
-    margin-right: 100px;
-    max-width: 5px;
-    border: black 1px solid;
-    border-radius: 100px;
-}
-
-/* Project Section */
-.projects {
-    background: lightslategray;
-    color: black;
-    padding: 50px 100px;
-    /* temporary */
-    /* border: black 10px solid;
-    border-radius: 20px;
-    margin: 50px; */
-}
-
-.projects h2 {
-    font-weight: bold;
-    font-size: 50px;
-}
-
-.projectsWrapper {
-    display: grid;
-    grid-template-columns: 1fr .50fr 1fr 3.75fr;
-}
-
-.projectsWrapper div {
-    background: black;
-    margin-right: 100px;
-    max-width: 5px;
-    border: black 1px solid;
-    border-radius: 100px;
-}
-
-/* Contact Section */
-.contact {
-    background: lightslategray;
-    color: black;
-    padding: 50px 100px;
-    /* temporary */
-    /* border: black 10px solid;
-    border-radius: 20px;
-    margin: 50px; */
-}
-
-.contact h2 {
-    font-weight: bold;
-    font-size: 50px;
-}
-
-.contactWrapper {
-    display: grid;
-    grid-template-columns: 1fr .50fr 1fr 3.75fr;
-}
-
-.contactWrapper div {
-    background: black;
-    margin-right: 100px;
-    max-width: 5px;
-    border: black 1px solid;
-    border-radius: 100px;
-}
-
-/* Resume Section */
+/* Sections */
+.about,
+.projects,
+.contact,
 .resume {
     background: lightslategray;
     color: black;
     padding: 50px 100px;
-    /* temporary */
-    /* border: black 10px solid;
-    border-radius: 20px;
-    margin: 50px; */
 }
-
-.resume h2 {
-    font-weight: bold;
-    font-size: 50px;
-}
-
-.resumeWrapper {
-    display: grid;
-    grid-template-columns: 1fr .50fr 1fr 3.75fr;
-}
-
-.resumeWrapper div {
-    background: black;
-    margin-right: 100px;
-    max-width: 5px;
-    border: black 1px solid;
-    border-radius: 100px;
-}
-
 
 /* Footer Section */
 footer {
     padding: 2rem 1rem;
+    clear: left;
 }
 footer h4 {
     text-align: center;
 }
 
 /* media queries */
-@media screen and (max-width: 768px) {
-    #mountain::after {
-        height: 50vh;;
+    /* how the size look when screen is 768px or less */
+    @media screen and (max-width: 768px) {
+        .navigationBar .navContainer a {
+            font-size: 1rem;
+        }
+        .navGrid {
+            display:grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            column-gap: 2vw;
+            padding: 30px 50px;
+        }
     }
-    header .content {
-        top: 5%;
-        margin-top: 5px;
+    /* how a page would look when you would print the page */
+    @media print {
+        
     }
-    header .content .button {
-        font-size: 9px;
-    }
-    .navGrid, .about, .projects, .contact, .resume {
-        grid-template-columns: 1fr 1fr;
-    }
-}
