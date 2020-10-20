@@ -163,13 +163,12 @@ main section h2 {
 .about {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20% 50% 50%;
+    grid-template-rows: 20% 50%;
     column-gap: 2vw;
     row-gap: 2vh;
     grid-template-areas:
-        " . about . "
+        "about about about"
         "img text text"
-        ". . ."
     ;
 }
 
@@ -192,6 +191,9 @@ main section h2 {
         background: rgb(132, 149, 167);
         border-radius: 3rem;
         padding: 3rem;
+        width: auto;
+        max-height: 25rem;
+        margin: auto;
     }
 .about img {
     width: 20rem;
@@ -310,6 +312,11 @@ footer h4 {
 }
 
 /* media queries */
+    @media screen and (max-width: 1024px) {
+        .about img {
+            width: 15rem;
+            height: auto;
+    }   
     /* how the size look when screen is 768px or less */
     @media screen and (max-width: 768px) {
         /* responsive navigation bar */
@@ -339,6 +346,10 @@ footer h4 {
         }
         .about img {
             align-self: center;
+        }
+        .projSection {
+            width: 30vw;
+            height: 30%;
         }
         .mainGrid section h2 {
             font-size: 3rem;
