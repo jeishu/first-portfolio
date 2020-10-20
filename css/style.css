@@ -54,15 +54,11 @@ header #mountain {
     filter: blur(0px);
     -webkit-filter: blur(0px);
 }
-#mountain:hover .content h1 {
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
-    transition: all 2000ms; 
-}
+#mountain:hover .content h1,
 #mountain:hover .content p {
     filter: blur(2px);
     -webkit-filter: blur(2px);
-    transition: all 3000ms;
+    transition: all 2000ms; 
 }
 
     /* h1 and p styles */
@@ -114,10 +110,9 @@ header #mountain {
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,1);
     }
 
+
 /* === Navbar === */
 .navContainer ul {
-    /* overflow-x: hidden; */
-    /* margin: auto; */
     padding: 2rem 1rem;
     
     text-decoration: none;
@@ -141,6 +136,7 @@ header #mountain {
     color: black;
     transition: all 1000ms;
 }
+/* sticky navbar */
 .navigationBar {
     position: -webkit-sticky;
     position: sticky;
@@ -150,7 +146,8 @@ header #mountain {
     background: rgba(60, 60, 60, 0.9);
 }
 
-/* main section */
+
+/* ==== Main section ==== */
 main section {
     margin-top: 0;
     margin-left: 0;
@@ -175,6 +172,7 @@ main section h2 {
     font-weight: bold;
 }
 
+
 /* === About === */
 .about {
     display: grid;
@@ -186,9 +184,7 @@ main section h2 {
         "about about about"
         "img text text"
     ;
-
 }
-
     /* About Grid */
     .about h2 {
         grid-area: about;
@@ -219,9 +215,27 @@ main section h2 {
     margin: 1rem;
 }
 
+
 /* === Projects === */
 .projects {
     height: auto;
+}
+.projects h2 {
+    padding: 2rem;
+}
+
+.projSection h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    width:100%;
+    padding: 0;
+    color: white;
+}
+.projSection p {
+    text-align: right;
+    width:100%;
+    padding: 0;
+    color: white;
 }
     /* Project Flex */
     .projWrapper {
@@ -233,27 +247,48 @@ main section h2 {
         margin-bottom: 10vh;
     }
     .projSection {
-        background: whitesmoke;
         border-radius: 2rem;
         padding: 2rem;
         margin: 1rem;
         width: 30vw;
         height: 30vh;
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
+    
     /* project hover */
-    .projWrapper .projSection:hover {
+    .projSection h5,
+    .projSection p {
+        display: none;
+        text-decoration: none;
+    }
+    .projSection:hover {
         cursor: pointer;
+        -ms-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
         transition: all 1000ms;
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,1);
     }
-    /* Project Grid */
-    .projects h2 {
-        grid-area: projects;
-        justify-self: start;
-        align-self: start;
-        padding: 2rem;
-    }
-
+        /* images */
+        #p1 {background-image: url(../images/p1-image.jpg);}
+        #p2 {background-image: url(../images/p2-image.jpg);}
+        #p3 {background-image: url(../images/p3-image.jpg);}
+        #p4 {background-image: url(../images/p4-image.jpg);}
+        #p5 {background-image: url(../images/p5-image.jpg);}
+        #p6 {background-image: url(../images/p6-image.jpg);}
+    
+        .projSection:hover h5, 
+        .projSection:focus h5,
+        .projSection:hover p, 
+        .projSection:focus p  {
+            display: block;
+        }
+    
 /* === Skills ===  */
 .skills {
     display: grid;
@@ -337,14 +372,25 @@ footer h4 {
     /* how the size look when screen is 768px or less */
     @media screen and (max-width: 768px) {
         /* responsive navigation bar */
+        .navigationBar {
+            background: var(--grayColor);
+        }
         .navigationBar .navContainer a {
             font-size: 1.5rem;
+            display: none;
         }
+
         .navContainer ul{
             flex-direction: column;
             line-height: 3rem;
             letter-spacing: .5rem;
         }
+        /* navbar into menubar */
+        .navigationBar:hover a {
+            display: block;
+            cursor: pointer;
+        }
+
         /* main section */
         .about, 
         .contact, 
