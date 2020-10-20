@@ -1,5 +1,5 @@
 :root{
-    --primColor: lightsteelblue; 
+    --pfontColor: lightsteelblue;
 }
 
 * {
@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
    
+html {
+    font-size: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
@@ -18,16 +22,19 @@ body {
     background-color:rgba(0, 0, 0, 0.9);
     margin:0;
     font-family: 'Lora', serif;
-    font-size: 17px;
-    color: var(--primColor);
+    font-size: 16px;
+    color: var(--pfontColor);
     line-height: 1.6;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 /* === landing page === */
 #mountain::after{
     content: "";
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-image: url("../images/torigate.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -36,6 +43,7 @@ body {
     filter: blur(10px);
     -webkit-filter: blur(10px);
     transition: all 1000ms;
+    
 }
 #mountain:hover::after {
     filter: blur(0px);
@@ -86,8 +94,8 @@ body {
         font-family: 'Montserrat', sans-serif;
         font-size: 18px;
         text-decoration: none;
-        color: var(--primColor);
-        border: lightsteelblue 1px solid;
+        color: var(--pfontColor);
+        border: var(--pfontColor) 1px solid;
         padding: 10px 20px;
         border-radius: 100px;
         margin-top: 20px;
@@ -121,7 +129,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     text-transform: uppercase;
-    color: lightsteelblue;
+    color: var(--pfontColor);
 }
 .navbutton:hover {
     cursor: pointer;
@@ -129,31 +137,27 @@ body {
     transition: all 1000ms;
 }
 
-/* Grid Container */
-.masterGrid {
-    /* display:grid;
-    grid-template-columns: 25% 2% 28% 45% ;
-    grid-template-rows: auto auto auto auto;
-    row-gap: 30px;
-    background: lightslategray;
-    padding: 3rem 6rem 3rem 6rem;
-    justify-items: start; */
-}
-
-main .masterGrid {
+/* main section */
+.mainGrid {
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.masterGrid section h2 {
+main section {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 5vh;
+}
+main section h2 {
     font-weight: bold;
     font-size: 3rem;
-    padding: 1rem;
-    max-width: 200px;
+    letter-spacing: 1.5rem;
+    /* max-width: 400px; */
+    margin: 0% auto;
     text-align: center;
 }
-.masterGrid p {
+.mainGrid p {
     text-align: left;
     color:black;
     padding: 1.5rem;
@@ -167,18 +171,14 @@ main .masterGrid {
     column-gap: 2vw;
     row-gap: 2vh;
     grid-template-areas:
-        "about about about"
+        " . about . "
         "img text text"
-    ;
-   
-    margin-top: 0;
-    padding-top: 0;
-    padding-bottom: 3vh;
+    ;  
 }
     /* About Grid */
     #aboutBtn {
         grid-area: about;
-        justify-self: center;
+        justify-self: stretch;
         align-self: center;
     }
     .about img {
@@ -193,10 +193,9 @@ main .masterGrid {
     }
 .about img {
     max-width: 200px;
-    /* margin: 2vh 2vw; */
     border: lightcyan 5px solid;
     border-radius: 100px;
-}    
+}
 
 /* === Projects === */
 .projects {
@@ -206,25 +205,21 @@ main .masterGrid {
     column-gap: 2vw;
     row-gap: 2vh;
     grid-template-areas:
-        "projects projects projects"
+        " . projects . "
         "text text text"
     ;
-   
-    margin-top: 0;
-    padding-top: 0;
-    padding-bottom: 3vh;
 }
     /* Project Grid */
     #projectsBtn {
         grid-area: projects;
-        justify-self: center;
+        justify-self: stretch;
         align-self: center;
     }
     .projects p {
         grid-area: text;
         justify-self: center;
         align-self: center;
-}
+    }
 
 /* === Contact ===  */
 .contact {
@@ -234,25 +229,21 @@ main .masterGrid {
     column-gap: 2vw;
     row-gap: 2vh;
     grid-template-areas:
-        "contact contact contact"
+        " . contact . "
         "text text text"
     ;
-   
-    margin-top: 0;
-    padding-top: 0;
-    padding-bottom: 3vh;
 }
     /* Contact Grid */
     #contactBtn {
         grid-area: contact;
-        justify-self: center;
+        justify-self: stretch;
         align-self: center;
     }
     .contact p {
         grid-area: text;
         justify-self: center;
         align-self: center;
-}
+    }
 
 /* === Resume ===  */
 .resume {
@@ -262,18 +253,14 @@ main .masterGrid {
     column-gap: 2vw;
     row-gap: 2vh;
     grid-template-areas:
-        "resume resume resume"
+        " . resume . "
         "text text text"
     ;
-   
-    margin-top: 0;
-    padding-top: 0;
-    padding-bottom: 3vh;
 }
     /* Resume Grid */
     #resumeBtn {
         grid-area: resume;
-        justify-self: center;
+        justify-self: stretch;
         align-self: center;
     }
     
@@ -281,8 +268,7 @@ main .masterGrid {
         grid-area: text;
         justify-self: center;
         align-self: center;
-}
-
+    }
 
 .about,
 .contact
@@ -311,10 +297,6 @@ footer h4 {
 /* media queries */
     /* how the size look when screen is 768px or less */
     @media screen and (max-width: 768px) {
-        #mountain {
-            
-        }
-        
         /* responsive navigation bar */
         .navigationBar .navContainer a {
             font-size: 1.5rem;
@@ -324,6 +306,28 @@ footer h4 {
             line-height: 3rem;
             letter-spacing: .5rem;
         }
+        /* main section */
+        .about, 
+        .projects, 
+        .contact, 
+        .resume {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .about img {
+            align-self: center;
+        }
+        .mainGrid section h2 {
+            font-size: 3rem;
+            letter-spacing: .5rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+
     }
     /* how a page would look when you would print the page */
     @media print {
