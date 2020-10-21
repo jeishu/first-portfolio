@@ -8,13 +8,21 @@
         <link rel="stylesheet" type="text/css" href="./css/style.css">   
         <link rel="stylesheet" type="text/css" href="./css/menu.css">
 
+        <script type="text/javascript" src="./javascript.js"></script>
+
+        <!-- == Wesbite Fonts == -->
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+        
+        <!-- == Social Media Icons == -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     </head>
     
     <body>
+        <button onclick="topFunction()" id="goTop" title="Go to top"><i class="fa fa-angle-up"></i></button>
+
     <!-- ===== Landing Page ===== -->
+        <div id="homeBtn"></div>
         <header id="mountain">
             <div class="content">
                 <h1>Jeremy Zhu</h1>
@@ -24,26 +32,30 @@
                 <a href="#nav" class="button">MENU</a>
             </div>
         </header>
-            
+        
     <!-- ===== Navigation Bar ===== -->
         <section class="navigationBar" id="nav">
             <nav class="navContainer">
                 <ul> 
                     <li class="navbutton">
-                        <a href="#aboutBtn" class="navbutton">About</a>
+                        <a href="#homeBtn">Home</a>
                     </li>
                     <li class="navbutton">
-                        <a href="#projectsBtn" class="navbutton">Projects</a>
+                        <a href="#aboutBtn">About</a>
                     </li>
                     <li class="navbutton">
-                        <a href="#skillsBtn" class="navbutton">Skills</a>
+                        <a href="#projectsBtn">Projects</a>
                     </li>
                     <li class="navbutton">
-                        <a href="#contactBtn" class="navbutton">Contact</a>
+                        <a href="#skillsBtn">Skills</a>
+                    </li>
+                    <li class="navbutton">
+                        <a href="#contactBtn">Contact</a>
                     </li>
                 </ul>
             </nav>
         </section>
+
     <!-- ===== Informtation Section ===== -->
         <main class="mainGrid">
         <!-- About Section -->
@@ -54,7 +66,6 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam cum recusandae facere soluta veritatis. In qui quam, voluptatum corporis odio optio ratione vitae facere mollitia non quod saepe magni at, nisi exercitationem. Velit repellendus veritatis reiciendis dicta assumenda quos neque et. Eos tenetur rerum porro illo maiores cumque incidunt officiis!
                 </p>
             </section>
-            
             
         <!-- Project Section -->
             <section class="projects" id="projectsBtn">
@@ -86,7 +97,6 @@
                     </div>
                 </div>
             </section>
-           
 
         <!-- Skills -->
             <section class="skills" id="skillsBtn">
@@ -96,7 +106,6 @@
                 </p>
 
             </section>
-            
             
         <!-- Contact -->
             <section class="contact" id="contactBtn">
@@ -110,8 +119,6 @@
                     <li><a href="mailto:jeremy.zhu@utexas.edu" target="_blank"><i class="fa fa-envelope" ></i></a></li>
                 </ul>
             </section>
-            
-
         </main>
 
     <!-- ===== Footer ===== -->
