@@ -317,13 +317,12 @@ main section h2 {
 .contact {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20% 50% 25%;
+    grid-template-rows: 20% 50%;
     column-gap: 2vw;
     row-gap: 2vh;
     position: relative;
     grid-template-areas:
         " . contact . "
-        ". . ."
         "text text text"
     ;
 }
@@ -388,6 +387,7 @@ main section h2 {
     .contact ul li:nth-child(3) a:hover .fa {color: #1DB954;}
     .contact ul li:nth-child(4) a:hover .fa {color: #007bb6;}
     .contact ul li:nth-child(5) a:hover .fa {color: #e4405f;}
+    .contact ul li:nth-child(6) a:hover .fa {color: lightgray;}
 
 .about,
 .skills
@@ -418,6 +418,7 @@ footer h4 {
         .about img {
             width: 15rem;
             height: auto;
+        }
     }   
     /* how the size look when screen is 768px or less */
     @media screen and (max-width: 768px) {
@@ -442,6 +443,11 @@ footer h4 {
         }
 
         /* main section */
+        .mainGrid section h2 {
+            font-size: 3rem;
+            letter-spacing: .5rem;
+            padding-top: 1rem;
+        }
         .about, 
         .contact, 
         .skills {
@@ -466,13 +472,15 @@ footer h4 {
             width: 30vw;
             height: 30%;
         }
-        .mainGrid section h2 {
-            font-size: 3rem;
-            letter-spacing: .5rem;
-            padding-top: 1rem;
+        .contact ul {
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
         }
-    }
-    /* how a page would look when you would print the page */
-    @media print {
+        .contact ul li {
+            margin: 1rem;
+        }
         
     }
