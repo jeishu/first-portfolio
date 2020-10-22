@@ -1,18 +1,37 @@
-## Jeremy Zhu's First Portfolio Website // Jeishu
+# Jeremy Zhu's First Portfolio Website // Jeishu
 This is our first homework assign when we had to start from scratch. Using our lectures, activities, and outside resources, we had to create a website with HTML and CSS (maybe Javascript, if we are feeling comfortable with it.)
 
 ## Motivation
 Besides this project being a homework, I was actually extremely excited to make my own website from scratch. Prior to this class, I had no knowledge in HTML and CSS.
- 
-## Screenshots
-Include logo/demo screenshot etc.
+
+## Table of Contents
+* [Features](#Features)
+* [Screenshots](#Screenshots)
+* [Code-Example](#Code-Example)
+* [Reference](#Reference)
+* [Tests/Issues](#Test/Issues)
+* [Contribute](#Contribute)
+* [Credits](#Credits)
+* [License](#License)
 
 ## Features
 This portfolio was mostly done with HTML and CSS, just one Javascript for the "scroll to top" action. No Bootstrap was used, we did not learn that in class. 
 Throughout the entire website, I used a lot of pseudo element (hover, focus, after), and used small transition styles to make the motion look as clean as possible.
 Utilize a good amount of media queries to help my website be more responsive to almost any screen size.
 
-## Code Example
+## Screenshots
+
+These are desktop views:
+
+![landing](./images/README-pics/landingpage.jpg)
+![skills](./images/README-pics/skillspage.jpg)
+
+These are iPhone X view:
+
+![landing](./images/README-pics/landing.png)
+![skills](./images/README-pics/skills.png)
+
+## Code-Example
 I utilized spaces and comments in HTML and CSS to organize and divide the sections up.
 ```
   <!-- ===== Landing Page ===== -->
