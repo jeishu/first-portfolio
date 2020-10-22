@@ -135,7 +135,7 @@ header #mountain {
     top: 0;
     z-index: 3;
     background-color: rgba(44, 44, 44, 0.9);
-    height: 10vh;
+    /* height: 10vh; */
 }
 .navContainer {
     padding: 1rem 1rem;
@@ -211,11 +211,11 @@ main section h2 {
     justify-content: center;
     align-items: center;
 }
-.about h2 {
+/* .about h2 {
     justify-self: center;
     align-self: center;
     padding: 3rem;
-}
+} */
     /* flexbox parent :: img div.aboutInfo */
 .aboutCard {
     display: flex;
@@ -278,38 +278,25 @@ main section h2 {
     width: 100%;
     height: 100vh;
 }
-.projects h2 {
+/* .projects h2 {
     justify-self: center;
     align-self: center;
     padding: 2rem;
-} 
-
-.projWrapper {      /* Flex Parent */
+}  */
+    /* flexbox parent :: multiple.projSection */
+.projWrapper {      
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10vh;
-} 
-.projSection h5 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    /* width:100%; */
-    padding: 0;
-    color: white;
-}
-.projSection p {
-    text-align: right;
-    /* width:100%; */
-    padding: 0;
-    color: white;
+    margin: 10vh 0 10vh;
 } 
 .projSection {
     border-radius: 2rem;
     padding: 2rem;
     margin: 1rem;
-    width: 30vw;
+    width: 20vw;
     height: 30vh;
     
     background-size: cover;
@@ -317,6 +304,18 @@ main section h2 {
     background-position: center;
     transition: all 1s;
 }
+.projSection h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0;
+    color: white;
+}
+.projSection p {
+    text-align: right;
+    padding: 0;
+    color: white;
+} 
+
     
 /* project hover */
 .projSection h5,
@@ -352,29 +351,61 @@ main section h2 {
 .skills {
     width: 100%;
     height: 100vh;
-    
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20% 75%;
-    column-gap: 2vw;
-    row-gap: 2vh;
-    grid-template-areas:
-        " . skills . "
-        "text text text"
-    ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-    /* Skills Grid */
-    .skills h2 {
+/* .skills h2 {
         grid-area: skills;
         justify-self: center;
-    align-self: center;
-        padding: 2rem;
-    }
-    .skills p {
-        grid-area: text;
-        justify-self: center;
         align-self: center;
-    }
+        padding: 2rem;
+    } */
+.skillWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: auto;
+    height: 50vh;
+    border-radius: 2rem;
+    padding: 0 2rem 0 2rem;
+    background-color:rgba(255, 255, 255, 0.5);
+    transition: all 1s;
+}
+.htmlLogo, 
+.cssLogo,
+.lrLogo,
+.psLogo,
+.cameraLogo {
+    width: 10rem;
+    height: auto;
+    margin: 1rem;
+    padding: 1rem;
+    transition: all 1s;
+}
+.skillWrapper:hover,
+.skillWrapper:focus {
+    transform: scale(1.1);
+    transition: all 1s;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 1rem 3.3rem 0 rgba(0,0,0,.5);
+}
+.htmlLogo:hover,
+.htmlLogo:focus,
+.cssLogo:hover,
+.cssLogo:focus,
+.lrLogo:hover,
+.lrLogo:focus,
+.psLogo:hover,
+.psLogo:focus,
+.cameraLogo:hover,
+.cameraLogo:focus {
+    transform: scale(1.3);
+    transition: all 1s;
+}
+
 
 /* === Contact ===  */
 .contact {
@@ -467,7 +498,7 @@ footer h4 {
 }
 
 
-/* media queries */
+/* ===== Media Queries ===== */
     @media screen and (max-width: 1024px) {
         .about img {
             width: 15rem;
