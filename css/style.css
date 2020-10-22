@@ -3,7 +3,6 @@
     --pfontColor: lightsteelblue;
     --grayColor: rgba(60, 60, 60, 0.9);
 }
-
 * {
     margin: 0;
     padding:0;
@@ -13,7 +12,6 @@ html {
     scroll-behavior: smooth;
     font-size: 16px;
     position: relative;
-    /* overflow-x: hidden; */
 }
 
 
@@ -24,15 +22,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background-color:rgba(0, 0, 0, 0.9);
+    width: 100%;
     margin:0;
     font-family: 'Lora', serif;
     color: var(--pfontColor);
     line-height: 1.6;
-    /* height: 100vh; */
-    width: 100%;
+    background-color:rgba(0, 0, 0, 0.9);
     position: relative;
-    /* overflow-x: hidden; */
 }
 
 /* === Landing page === */
@@ -97,8 +93,8 @@ header #mountain {
         color: var(--pfontColor);
         border: var(--pfontColor) 1px solid;
         padding: 10px 16px;
-        border-radius: 500px;
         margin-top: 20px;
+        border-radius: 500px;
     }
     .content .button:hover {
         cursor: pointer;
@@ -109,19 +105,21 @@ header #mountain {
     }
 
     #goTop {
+        cursor: pointer;
+        padding: 1rem;
+        
         display: none;
         position: fixed;
         bottom: 2%;
         right: 3%;
         z-index: 99999999;
         font-size: 1rem;
-        border: none;
-        outline: none;
         background-color: rgba(121, 121, 121, 0.5);
         color: white;
-        cursor: pointer;
-        padding: 1rem;
+        
+        border: none;
         border-radius: .4rem;
+        outline: none;
     }
     
     #goTop:hover {
@@ -135,7 +133,6 @@ header #mountain {
     top: 0;
     z-index: 3;
     background-color: rgba(44, 44, 44, 0.9);
-    /* height: 10vh; */
 }
 .navContainer {
     padding: 1rem 1rem;
@@ -150,54 +147,58 @@ header #mountain {
     text-align: center;
 }
 .navContainer a {
-    text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
-    text-transform: uppercase;
     color: var(--pfontColor);
     text-shadow: -2px 2px 7px rgba(121, 121, 121, 0.9);
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 
 /* ==== Main section ==== */
 main section {
+    width: 100%;
+    height: 100vh;
+    
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
     padding-top: 0;
     padding-bottom: 5vh;
-    height: 100vh;
-    width: 100%;
 }
 main section h2 {
+    margin: 3rem auto 0rem;
     font-weight: bolder;
     font-size: 3rem;
-    letter-spacing: 1.2rem;
-    margin: 3rem auto 0rem;
+    letter-spacing: 1.1rem;
+    
     text-align: center;
     color: var(--grayColor);
-    text-shadow: -2px 2px 7px rgba(0, 0, 0, .5);
 }
 .mainGrid p {
+    /* padding: 1.5rem; */
+    font-weight: bold;
     text-align: left;
     color: var(--grayColor);
-    padding: 1.5rem;
-    font-weight: bold;
+    
 }
 
 .about,
 .skills
 {
+    padding: 50px 100px;
     background: lightsteelblue;
     color: black;
-    padding: 50px 100px;
+    
 }
 
 .projects, 
 .contact {
+    padding: 50px 100px;
     background: white;
     color: black;
-    padding: 50px 100px;
+    
 }
 
 
@@ -218,15 +219,18 @@ main section h2 {
 } */
     /* flexbox parent :: img div.aboutInfo */
 .aboutCard {
+    width: 50vw;
+    height: auto;
+    
+    margin-bottom: 2rem;
+    
     display: flex;
     justify-content: center;
     align-items: center;
+
     background-color:rgba(255, 255, 255, 0.5);
     border-radius: 2rem;
-    width: 50vw;
-    height: auto;
     transition: all 1s;
-    margin-bottom: 2rem;
 }
     /* flexbox parent  :: p.name p.title p.info */
 .aboutInfo {
@@ -235,32 +239,33 @@ main section h2 {
     justify-content: space-evenly;
 }
 .about img {
-    float: left;
     width: 20rem;
     height: auto;
-    border-radius: 3rem;
+
     margin: 1rem;
     padding: 2rem;
+
+    float: left;
+    border-radius: 3rem;
+    transition: all .5s;
+}
+.about p {
+    padding-right: 1.5rem;
+    margin: .5rem;
 }
 .name {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
-    
-    /* margin: 2rem; */
+
     justify-content: flex-start;
 }
 .title {
-    /* margin: 1rem;
-    padding: 1rem; */
     opacity: .6;
     justify-content: flex-start;
 }
 .info {
-    /* margin: 1rem;
-    padding: 2rem; */
     width: auto;
     max-height: 25rem;
-    
     align-self: flex-end;
 }
 
@@ -277,6 +282,10 @@ main section h2 {
 .projects {
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 /* .projects h2 {
     justify-self: center;
@@ -285,19 +294,27 @@ main section h2 {
 }  */
     /* flexbox parent :: multiple.projSection */
 .projWrapper {      
+    margin: 10vh 0 10vh;
+    padding: 4rem;
+    
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 10vh 0 10vh;
+
+    background-color: #f2f2f2;
+    border-radius: 2rem;
+    transition: all .5s;
 } 
 .projSection {
-    border-radius: 2rem;
-    padding: 2rem;
-    margin: 1rem;
     width: 20vw;
     height: 30vh;
+
+    padding: 2rem;
+    margin: 1rem;
+
+    border-radius: 2rem;
     
     background-size: cover;
     background-repeat: no-repeat;
@@ -322,6 +339,7 @@ main section h2 {
 .projSection p {
     display: none;
     text-decoration: none;
+    text-emphasis: wrap;
 }
 .projSection:hover {
     cursor: pointer;
@@ -342,15 +360,15 @@ main section h2 {
     .projSection:hover p, 
     .projSection:focus p  {
         display: block;
-        transition: all 1s;
+        transition: all 3s;
         text-shadow: -2px 2px 7px rgba(0, 0, 0, .9);
     }
-        /* hovering over the element, focus keeps it zoomed in mobile */
     
 /* === Skills ===  */
 .skills {
     width: 100%;
     height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -363,17 +381,21 @@ main section h2 {
         padding: 2rem;
     } */
 .skillWrapper {
+    width: auto;
+    height: 50vh;
+
+    padding: 0 2rem 0 2rem;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    width: auto;
-    height: 50vh;
+    
     border-radius: 2rem;
-    padding: 0 2rem 0 2rem;
+    
     background-color:rgba(255, 255, 255, 0.5);
-    transition: all 1s;
+    transition: all .5s;
 }
 .htmlLogo, 
 .cssLogo,
@@ -382,6 +404,7 @@ main section h2 {
 .cameraLogo {
     width: 10rem;
     height: auto;
+
     margin: 1rem;
     padding: 1rem;
     transition: all 1s;
@@ -411,6 +434,7 @@ main section h2 {
 .contact {
     width: 100%;
     height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -418,38 +442,40 @@ main section h2 {
 .contact h2 {
     margin: .2rem;
     padding: .5rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
     /* Form */
 .formWrapper {
+    width:30vw;
+    height: auto;
+
+    padding: 1.3rem;
+
     border-radius: 2rem;
     background-color: #f2f2f2;
-    padding: 1.3rem;
-    width:50vw;
-    height: auto;
+
+    transition: all .5s;
 }
-/* .formWrapper label {
-    font-size: 1rem;
-    font-family: 'Lora', serif;
-} */
 
 input[type=text], select, textarea {
     width: 100%; 
+    height: auto;
+    
     padding: 1rem;  
     margin: 1rem 0 1.5rem 0;
+    
     border: 1px solid #ccc; 
     border-radius: 1rem;
-    height: auto;
-    /* resize: vertical */
 }
 input[type=submit] {
+    cursor: pointer;
     background-color: lightsteelblue;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 2rem;
-    cursor: pointer;
+    
 }
 input[type=submit]:hover {
     background-color: black;
@@ -472,15 +498,19 @@ input[type=submit]:hover {
 }
 
 .contact ul li a {
+    display: block;
     position: relative;
+    
     width: 60px;
     height: 60px;
-    display: block;
-    text-align: center;
-    margin: 1rem;
-    border-radius: 50%;
+    
     padding: 6px;
-    box-sizing: border-box;
+    margin: 1rem;
+    
+    text-align: center;
+    
+    border-radius: 50%;
+    
     text-decoration: none;
     box-shadow: 0 10px 15px rgba(0,0,0,0.3);
     background: linear-gradient(0deg, #ddd, #fff);
@@ -489,21 +519,24 @@ input[type=submit]:hover {
 
 .contact ul li a:hover {
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    text-decoration: none;
 }
 
 .contact ul li a .fa {
+    display: block;
+    
     width: 100%;
     height:100%;
-    display: block;
-    background: linear-gradient(0deg, #fff, #ddd);
-    border-radius: 50%;
-    line-height: calc(60px - 12px);
     font-size:24px;
+
     color: #262626;
+    line-height: calc(60px - 12px);
+    border-radius: 50%;
+    
+    background: linear-gradient(0deg, #fff, #ddd);
     transition: .5s;
 }
 
+    /* selectors for icons using nth-child */
 .contact ul li:nth-child(1) a:hover .fa {color: grey;}
 .contact ul li:nth-child(2) a:hover .fa {color: #00aced;}
 .contact ul li:nth-child(3) a:hover .fa {color: #1DB954;}
@@ -523,9 +556,64 @@ footer h4 {
 
 
 /* ===== Media Queries ===== */
+@media screen and (max-width: 1440px) {
+    .aboutCard {
+        width: 60vw;
+        height: auto;
+    }
+    .about img {
+        width: 20rem;
+        height: auto;
+        padding: 1rem;
+    }
+    .projSection {
+        width: auto;
+        height: 15vh;
+    }
+    .formWrapper {
+        width:30rem;
+    }
+}
+@media screen and (max-width: 1200px) {
+   
+}
     @media screen and (max-width: 1024px) {
+        .aboutCard {
+            width: 80vw;
+            height: auto;
+        }
         .about img {
             width: 15rem;
+            height: auto;
+            padding: 1rem;
+        }
+        .aboutInfo {
+            padding-right: .5rem;
+        }
+        .about p {
+            padding-right: 1rem;
+            margin: .5rem;
+        }
+        .projWrapper {
+            flex-direction: column;
+        }
+        .projSection {
+            width: 15rem;
+            height: auto;
+        }
+        .skillWrapper {
+            width: 25rem;
+            height: auto;
+
+            padding: 1rem;
+            flex-direction: column;
+        }
+        .htmlLogo, 
+        .cssLogo,
+        .lrLogo,
+        .psLogo,
+        .cameraLogo {
+            width: 7rem;
             height: auto;
         }
     }   
@@ -550,69 +638,56 @@ footer h4 {
             display: block;
             cursor: pointer;
         }
-
-        /* main section */
-        .mainGrid section h2 {
-            font-size: 3rem;
-            letter-spacing: .5rem;
-            padding-top: 1rem;
-        }
-        .about, 
-        .contact, 
-        .skills {
-            display: flex;
+        
+        .aboutCard {
             flex-direction: column;
-            justify-content: start;
-            align-items: start;
-        }
-        .about img {
-            height: 30vh;
-            width: auto;
         }
         .about p {
-            margin: .5rem;
-            padding: 2rem 2rem;
-            font-size: .95rem;
+            text-align: center;
+            padding: 0%;
         }
-        .about img {
-            align-self: center;
-        }
-        .projSection {
-            width: 30vw;
-            height: 15vh;
-        }
-        .contact h2 {
-            justify-content: start;
-        }
-        .contact ul {
-            display:flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+        .aboutInfo {
+            width: 27rem;
             justify-content: center;
             align-items: center;
-            position: relative;
+            padding: 1rem;
+            
         }
-        .contact ul li {
+        .about img {
+            width: 23rem;
+            margin: 1rem 1rem 0;
+        }
+        .projWrapper {
+            margin: 0;
+            padding: 2rem;
+        }
+        .projSection {
+            width: 25rem;
+            height: 6rem;
+        
+            padding: 1rem;
             margin: 1rem;
         }
         
-    }
-    @media screen and (max-width: 622px) {
-        .about,
-        .skills,
-        .projects, 
-        .contact
-        {
-            padding: 1rem 1.3rem;
+        .contact {
+            flex-direction: column;
         }
-        h2{
-            font-size: 1rem;
-            text-align: center;
+        .contact ul {
+            display: flex;
+            flex-direction: row;
         }
-        .contact ul li {
-            margin: 2rem;
-            padding: 0 3rem;
+        .contact ul li a {
+            width: 30px;
+            height: 30px;
         }
+        
+        .contact ul li a .fa {
+            display: block;
+            font-size:12px;
+            border-radius: 50%;
+            line-height: calc(30px - 12px);
+        }
+        
     }
     @media screen and (max-width: 375px) {
         .navigationBar {
