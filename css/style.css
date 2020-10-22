@@ -40,7 +40,7 @@ header #mountain {
     content: "";
     height: 100vh;
     width: 100%;
-    background-image: url("../images/torigate.jpg");
+    background-image: url("../images/website-pics/torigate.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -177,11 +177,9 @@ main section h2 {
     color: var(--grayColor);
 }
 .mainGrid p {
-    /* padding: 1.5rem; */
     font-weight: bold;
     text-align: left;
     color: var(--grayColor);
-    
 }
 
 .about,
@@ -348,12 +346,12 @@ main section h2 {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 1rem 3.3rem 0 rgba(0,0,0,1);
 }
     /* images */
-    #p1 {background-image: url("../images/p1-image.jpg");}
-    #p2 {background-image: url("../images/p2-image.jpg");}
-    #p3 {background-image: url("../images/p3-image.jpg");}
-    #p4 {background-image: url("../images/p4-image.jpg");}
-    #p5 {background-image: url("../images/p5-image.jpg");}
-    #p6 {background-image: url("../images/p6-image.jpg");}
+    #p1 {background-image: url("../images/website-pics/p1-image.jpg");}
+    #p2 {background-image: url("../images/website-pics/p2-image.jpg");}
+    #p3 {background-image: url("../images/website-pics/p3-image.jpg");}
+    #p4 {background-image: url("../images/website-pics/p4-image.jpg");}
+    #p5 {background-image: url("../images/website-pics/p5-image.jpg");}
+    #p6 {background-image: url("../images/website-pics/p6-image.jpg");}
 
     .projSection:hover h5, 
     .projSection:focus h5,
@@ -726,9 +724,18 @@ footer h4 {
         padding: 0;
     }
     .projSection {
-        width: 5rem;
+        width: 7rem;
         height: auto;
     }
+    .projSection h5 {
+        font-size: .6rem;
+        position: absolute;
+        top: 15%;
+       left:10%;
+    }
+    .projSection p {
+        font-size: .4rem;
+    } 
     .skillWrapper {
         width: 12rem;
         height: auto;
