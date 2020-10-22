@@ -30,7 +30,7 @@ body {
     color: var(--pfontColor);
     line-height: 1.6;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     position: relative;
     /* overflow-x: hidden; */
 }
@@ -43,7 +43,7 @@ header #mountain {
 #mountain::after{
     content: "";
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-image: url("../images/torigate.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -159,30 +159,6 @@ header #mountain {
     text-shadow: -2px 2px 7px rgba(121, 121, 121, 0.9);
 }
 
-/* sticky navbar */
-/* #navbar {
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  #navbar a:hover {
-    color: black;
-  }
-  
-  #navbar a.active {
-    color: white;
-  }
-  
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-  }
-  
-  .sticky + main {
-    padding-top: 60px;
-  } */
-
 
 /* ==== Main section ==== */
 main section {
@@ -219,15 +195,15 @@ main section h2 {
     column-gap: 2vw;
     row-gap: 2vh;
     grid-template-areas:
-        "about about about"
+        ". about ."
         "img text text"
     ;
 }
     /* About Grid */ /* Grid-Area assigns names for the the grid-template-areas */
     .about h2 {
         grid-area: about;
-        justify-self: start;
-        align-self: start;
+        justify-self: center;
+        align-self: center;
         padding: 2rem;
     }
     .about img {
@@ -552,6 +528,20 @@ footer h4 {
         }
     }
     @media screen and (max-width: 375px) {
+        .navigationBar {
+            background: var(--grayColor);
+        }
+        .navigationBar .navContainer a {
+            font-size: 1.5rem;
+            display: none;
+        }
+
+        .navContainer {
+            flex-direction: column;
+            line-height: 3rem;
+            letter-spacing: .5rem;
+        }
+        
         .about,
         .skills,
         .projects, 
@@ -559,26 +549,33 @@ footer h4 {
         {
             padding: 1rem 1.3rem;
         }
-        h2{
-            font-size: 1rem;
+        main section h2{
+            font-size: 3rem;
             text-align: center;
             margin: 0;
+            letter-spacing: 0;
         }
-        .about h2 {
-            margin: 0;
+        .about {
+            display:flex;
+            flex-direction: column;
         }
         .about img {
-                height: 30vh;
+                height: 20vh;
                 width: auto;
                 align-self: center;
             }
         .about p {
                 margin: .5rem;
                 padding: 2rem 2rem;
-                font-size: .95rem;
+                font-size: .8rem;
+        }
+        .contact ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .contact ul li {
-            margin: 1rem;
-            padding: 1rem 1rem;
+            margin: .1;
+            padding: .1rem .1rem;
         }
     }
