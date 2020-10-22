@@ -411,81 +411,105 @@ main section h2 {
 .contact {
     width: 100%;
     height: 100vh;
-    
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20% 50%;
-    column-gap: 2vw;
-    row-gap: 2vh;
-    position: relative; /* Used to keep the buttons position absolute for "ul li a" */
-    grid-template-areas:
-        " . contact . "
-        "text text text"
-    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-    /* Contact Grid */
-    .contact h2 {
-        grid-area: contact;
-        justify-self: center;
-        align-self: center;
-        padding: 2rem;
-    }
-    .contact ul {
-        position: absolute;
-        /* top:50%;
-        left:50%;
-        transform: translate(-50%, -50%); */
-        margin:0;
-        padding:0;
-        display: flex;
-        grid-area: text;
-        justify-self: center;
-        align-self: center;
-    }
-    
-    .contact ul li {
-        list-style: none;
-    }
-    
-    .contact ul li a {
-        position: relative;
-        width:60px;
-        height:60px;
-        display: block;
-        text-align: center;
-        margin:0 10px;
-        border-radius: 50%;
-        padding: 6px;
-        box-sizing: border-box;
-        text-decoration: none;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.3);
-        background: linear-gradient(0deg, #ddd, #fff);
-        transition: .5s;
-    }
-    
-    .contact ul li a:hover {
-        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-        text-decoration: none;
-    }
-    
-    .contact ul li a .fa {
-        width: 100%;
-        height:100%;
-        display: block;
-        background: linear-gradient(0deg, #fff, #ddd);
-        border-radius: 50%;
-        line-height: calc(60px - 12px);
-        font-size:24px;
-        color: #262626;
-        transition: .5s;
-    }
+.contact h2 {
+    margin: .2rem;
+    padding: .5rem;
+    font-size: 2rem;
+}
 
-    .contact ul li:nth-child(1) a:hover .fa {color: grey;}
-    .contact ul li:nth-child(2) a:hover .fa {color: #00aced;}
-    .contact ul li:nth-child(3) a:hover .fa {color: #1DB954;}
-    .contact ul li:nth-child(4) a:hover .fa {color: #007bb6;}
-    .contact ul li:nth-child(5) a:hover .fa {color: #e4405f;}
-    .contact ul li:nth-child(6) a:hover .fa {color: lightgray;}
+    /* Form */
+.formWrapper {
+    border-radius: 2rem;
+    background-color: #f2f2f2;
+    padding: 1.3rem;
+    width:50vw;
+    height: auto;
+}
+/* .formWrapper label {
+    font-size: 1rem;
+    font-family: 'Lora', serif;
+} */
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 1rem;  
+    margin: 1rem 0 1.5rem 0;
+    border: 1px solid #ccc; 
+    border-radius: 1rem;
+    height: auto;
+    /* resize: vertical */
+}
+input[type=submit] {
+    background-color: lightsteelblue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: black;
+}
+
+/* Social Icons */
+.contact ul {
+    margin:1rem;
+    padding:0;
+
+    display: flex;
+    flex-direction: column;
+    grid-area: text;
+    justify-self: center;
+    align-self: center;
+}
+
+.contact ul li {
+    list-style: none;
+}
+
+.contact ul li a {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    margin: 1rem;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+    transition: .5s;
+}
+
+.contact ul li a:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    text-decoration: none;
+}
+
+.contact ul li a .fa {
+    width: 100%;
+    height:100%;
+    display: block;
+    background: linear-gradient(0deg, #fff, #ddd);
+    border-radius: 50%;
+    line-height: calc(60px - 12px);
+    font-size:24px;
+    color: #262626;
+    transition: .5s;
+}
+
+.contact ul li:nth-child(1) a:hover .fa {color: grey;}
+.contact ul li:nth-child(2) a:hover .fa {color: #00aced;}
+.contact ul li:nth-child(3) a:hover .fa {color: #1DB954;}
+.contact ul li:nth-child(4) a:hover .fa {color: #007bb6;}
+.contact ul li:nth-child(5) a:hover .fa {color: #e4405f;}
+.contact ul li:nth-child(6) a:hover .fa {color: lightgray;}
 
 
 /* Footer Section */
