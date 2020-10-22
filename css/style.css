@@ -13,7 +13,7 @@ html {
     scroll-behavior: smooth;
     font-size: 16px;
     position: relative;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 
@@ -30,7 +30,7 @@ body {
     color: var(--pfontColor);
     line-height: 1.6;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
     /* overflow-x: hidden; */
 }
@@ -109,11 +109,11 @@ header #mountain {
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,1);
     }
 
-    #goTop {
+    /* #goTop {
         display: none;
         position: fixed;
-        bottom: 1.5rem;
-        right: 3rem;
+        bottom: 2%;
+        right: 3%;
         z-index: 99999999;
         font-size: 1rem;
         border: none;
@@ -127,10 +127,18 @@ header #mountain {
     
     #goTop:hover {
         background-color: rgb(201, 201, 201);
-    }
+    } */
 
 /* === Navbar === */
-.navContainer ul {
+.navigationBar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background: rgba(60, 60, 60, 0.9);
+}
+    /* Makes the navbar move to the top when scrolling down */
+.navContainer {
     padding: 2rem 1rem;
     
     text-decoration: none;
@@ -150,21 +158,31 @@ header #mountain {
     color: var(--pfontColor);
     text-shadow: -2px 2px 7px rgba(121, 121, 121, 0.9);
 }
-.navbutton:hover {
-    cursor: pointer;
-    color: black;
-    transition: all 1s;
-}
+
 /* sticky navbar */
-.navigationBar {
-    position: -webkit-sticky;
-    position: sticky;
+/* #navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  #navbar a:hover {
+    color: black;
+  }
+  
+  #navbar a.active {
+    color: white;
+  }
+  
+  .sticky {
+    position: fixed;
     top: 0;
-    width: 100%;
-    z-index: 1;
-    background: rgba(60, 60, 60, 0.9);
-}
-    /* Makes the navbar move to the top when scrolling down */
+    width: 100vw;
+  }
+  
+  .sticky + main {
+    padding-top: 60px;
+  } */
+
 
 /* ==== Main section ==== */
 main section {
@@ -197,7 +215,7 @@ main section h2 {
 .about {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20% 50%;
+    grid-template-rows: 25% 50%;
     column-gap: 2vw;
     row-gap: 2vh;
     grid-template-areas:
@@ -436,6 +454,7 @@ footer h4 {
 
 /* media queries */
     @media screen and (max-width: 1024px) {
+        }
         .about img {
             width: 15rem;
             height: auto;
@@ -452,7 +471,7 @@ footer h4 {
             display: none;
         }
 
-        .navContainer ul{
+        .navContainer {
             flex-direction: column;
             line-height: 3rem;
             letter-spacing: .5rem;
@@ -508,4 +527,58 @@ footer h4 {
             margin: 1rem;
         }
         
+    }
+    @media screen and (max-width: 622px) {
+        #mountain:hover .content h1,
+        #mountain:hover .content p {
+            filter: blur(2px);
+            transition: all 1s; 
+        }
+
+        .about,
+        .skills,
+        .projects, 
+        .contact
+        {
+            padding: 1rem 1.3rem;
+        }
+        h2{
+            font-size: 1rem;
+            text-align: center;
+        }
+        .contact ul li {
+            margin: 2rem;
+            padding: 0 3rem;
+        }
+    }
+    @media screen and (max-width: 375px) {
+        .about,
+        .skills,
+        .projects, 
+        .contact
+        {
+            padding: 1rem 1.3rem;
+        }
+        h2{
+            font-size: 1rem;
+            text-align: center;
+            margin: 0;
+        }
+        .about h2 {
+            margin: 0;
+        }
+        .about img {
+                height: 30vh;
+                width: auto;
+                align-self: center;
+            }
+        .about p {
+                margin: .5rem;
+                padding: 2rem 2rem;
+                font-size: .95rem;
+        }
+        .contact ul li {
+            margin: 1rem;
+            padding: 1rem 1rem;
+        }
     }
