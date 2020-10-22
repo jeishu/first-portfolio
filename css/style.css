@@ -574,188 +574,181 @@ footer h4 {
         width:30rem;
     }
 }
-@media screen and (max-width: 1200px) {
-   
+@media screen and (max-width: 1024px) {
+    .aboutCard {
+        width: 80vw;
+        height: auto;
+    }
+    .about img {
+        width: 15rem;
+        height: auto;
+        padding: 1rem;
+    }
+    .aboutInfo {
+        padding-right: .5rem;
+    }
+    .about p {
+        padding-right: 1rem;
+        margin: .5rem;
+    }
+    .projWrapper {
+        flex-direction: column;
+    }
+    .projSection {
+        width: 15rem;
+        height: auto;
+    }
+    .skillWrapper {
+        width: 25rem;
+        height: auto;
+
+        padding: 1rem;
+        flex-direction: column;
+    }
+    .htmlLogo, 
+    .cssLogo,
+    .lrLogo,
+    .psLogo,
+    .cameraLogo {
+        width: 7rem;
+        height: auto;
+    }
+}   
+
+@media screen and (max-width: 768px) {
+    /* responsive navigation bar */
+    .navigationBar {
+        background: var(--grayColor);
+    }
+    .navigationBar .navContainer a {
+        font-size: 1.5rem;
+        display: none;
+    }
+
+    .navContainer {
+        flex-direction: column;
+        line-height: 3rem;
+        letter-spacing: .5rem;
+    }
+    /* navbar into menubar */
+    .navigationBar:hover a {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .aboutCard {
+        flex-direction: column;
+    }
+    .about p {
+        text-align: center;
+        padding: 0%;
+    }
+    .aboutInfo {
+        width: 27rem;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;   
+    }
+    .about img {
+        width: 23rem;
+        margin: 1rem 1rem 0;
+    }
+    .projWrapper {
+        margin: 0;
+        padding: 2rem;
+    }
+    
+    .contact {
+        flex-direction: column;
+    }
+    .contact ul {
+        display: flex;
+        flex-direction: row;
+    }
+    .contact ul li a {
+        width: 30px;
+        height: 30px;
+    }
+    .contact ul li a .fa {
+        display: block;
+        font-size:12px;
+        border-radius: 50%;
+        line-height: calc(30px - 12px);
+    }
+    
 }
-    @media screen and (max-width: 1024px) {
-        .aboutCard {
-            width: 80vw;
-            height: auto;
-        }
-        .about img {
-            width: 15rem;
-            height: auto;
-            padding: 1rem;
-        }
-        .aboutInfo {
-            padding-right: .5rem;
-        }
-        .about p {
-            padding-right: 1rem;
-            margin: .5rem;
-        }
-        .projWrapper {
-            flex-direction: column;
-        }
-        .projSection {
-            width: 15rem;
-            height: auto;
-        }
-        .skillWrapper {
-            width: 25rem;
-            height: auto;
-
-            padding: 1rem;
-            flex-direction: column;
-        }
-        .htmlLogo, 
-        .cssLogo,
-        .lrLogo,
-        .psLogo,
-        .cameraLogo {
-            width: 7rem;
-            height: auto;
-        }
-    }   
-    /* how the size look when screen is 768px or less */
-    @media screen and (max-width: 768px) {
-        /* responsive navigation bar */
-        .navigationBar {
-            background: var(--grayColor);
-        }
-        .navigationBar .navContainer a {
-            font-size: 1.5rem;
-            display: none;
-        }
-
-        .navContainer {
-            flex-direction: column;
-            line-height: 3rem;
-            letter-spacing: .5rem;
-        }
-        /* navbar into menubar */
-        .navigationBar:hover a {
-            display: block;
-            cursor: pointer;
-        }
-        
-        .aboutCard {
-            flex-direction: column;
-        }
-        .about p {
-            text-align: center;
-            padding: 0%;
-        }
-        .aboutInfo {
-            width: 27rem;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem;
-            
-        }
-        .about img {
-            width: 23rem;
-            margin: 1rem 1rem 0;
-        }
-        .projWrapper {
-            margin: 0;
-            padding: 2rem;
-        }
-        .projSection {
-            width: 25rem;
-            height: 6rem;
-        
-            padding: 1rem;
-            margin: 1rem;
-        }
-        
-        .contact {
-            flex-direction: column;
-        }
-        .contact ul {
-            display: flex;
-            flex-direction: row;
-        }
-        .contact ul li a {
-            width: 30px;
-            height: 30px;
-        }
-        
-        .contact ul li a .fa {
-            display: block;
-            font-size:12px;
-            border-radius: 50%;
-            line-height: calc(30px - 12px);
-        }
-        
+@media screen and (max-width: 660px) {
+    .about img {
+        height: auto;
+        width: 15rem;
     }
-    @media screen and (max-width: 375px) {
-        .navigationBar {
-            background: var(--grayColor);
-        }
-        .navigationBar .navContainer a {
-            font-size: 1.5rem;
-            display: none;
-        }
-
-        .navContainer {
-            flex-direction: column;
-            line-height: 3rem;
-            letter-spacing: .5rem;
-        }
-        
-        .about,
-        .skills,
-        .projects, 
-        .contact
-        {
-            padding: 1rem 1.3rem;
-        }
-        main section h2{
-            font-size: 3rem;
-            text-align: center;
-            margin: 0;
-            letter-spacing: 0;
-        }
-        .about {
-            display:flex;
-            flex-direction: column;
-        }
-        .about img {
-                height: 25vh;
-                width: auto;
-                align-self: center;
-            }
-        .about p {
-                margin: .5rem;
-                padding: 2rem 2rem;
-                font-size: .8rem;
-        }
-        .projSection h5 {
-            position: absolute;
-            left: 10%;
-            top: 15%;
-            font-size: .7rem;
-            text-align: left;
-        }
-        .projSection p {
-            position: absolute;
-            bottom: 15%;
-            right: 10%;
-            font-size: .4rem;
-            text-align: right;
-        } 
-        .projSection {
-            width: 30vw;
-            height: 15vh;
-        }
-        .contact ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .contact ul li {
-            margin: .1;
-            padding: .1rem .1rem;
-        }
+    .projSection h5 {
+        font-size: 1rem;
     }
+    .projSection p {
+        position: absolute;
+        bottom: 15%;
+        right: 10%;
+        font-size: .5rem;
+        text-align: right;
+    } 
+    .skillWrapper {
+        width: 15rem;
+        height: auto;
+    }
+    .htmlLogo, 
+    .cssLogo,
+    .lrLogo,
+    .psLogo,
+    .cameraLogo {
+        width: 5rem;
+        height: auto;
+    }
+    .formWrapper {
+        width:20rem;
+    }
+    .contact h2 {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 555px) {
+    .about img {
+        height: auto;
+        width: 10rem;
+    }
+    .aboutInfo {
+        width: 20rem;
+        padding: 1.1rem;  
+    }
+    .projWrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .projSection {
+        width: 5rem;
+        height: auto;
+    }
+    .skillWrapper {
+        width: 12rem;
+        height: auto;
+    }
+    .htmlLogo, 
+    .cssLogo,
+    .lrLogo,
+    .psLogo,
+    .cameraLogo {
+        width: 4.4rem;
+        height: auto;
+    }
+    .formWrapper {
+        width:15rem;
+    }
+    .contact h2 {
+        font-size: 1.1rem;
+        letter-spacing: 0;
+    }
+    .contact ul li a {
+        margin: .5rem;
+    }
+}
