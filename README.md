@@ -86,6 +86,7 @@ Spaces used for dividing up the styles in CSS || Comments used to help indicate 
 ```
 
 ## Reference
+
 These are websites I used to aid me in learning different techniques within HTML and CSS (and a dash of Javascript).
 > - [CSS-Tricks](https://css-tricks.com/) || Learn most of my CSS from this website.
 > - [Developer Mozilla](https://developer.mozilla.org/en-US/) || Learn most of my tag definitions here.
@@ -95,7 +96,7 @@ These are websites I used to aid me in learning different techniques within HTML
 > - [Traversy Media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA) || Watched his basics to HTML and CSS and other video to help create this website.
 
 ## Tests/Issues
-I utilized the Chrom Dev Tool to help fix many problems that I had encountered
+
 > OVERFLOW-X: HIDDEN;
 - I had issues margin, and padding that would flow outside of the viewport, which lead to a horizontal scrollbar.
 - I initally used this to hid the horizontal bar, this lead to more issues than helping.
@@ -110,11 +111,13 @@ I utilized the Chrom Dev Tool to help fix many problems that I had encountered
 - Used to help identify limits for my Media Queries.
 
 ## Contribute
+
 - My class instructor, Calvin
 - My tutor, Sangeetha
 - My classmates and study groups
 
 ## Credits
+
 > [DevFolio](https://bootstrapmade.com/demo/themes/DevFolio/)
 - A good amount of inspirations came from this portfolio (Thanks Dora for linking this.)
 
@@ -126,5 +129,6 @@ I utilized the Chrom Dev Tool to help fix many problems that I had encountered
 - This is where I got my background image from, also used for my temporary Project's Image.
 
 ## License
+
 MIT © [Jeremy Zhu](2020)
 
