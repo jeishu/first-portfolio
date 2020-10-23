@@ -1,10 +1,13 @@
 # Jeremy Zhu's First Portfolio Website // Jeishu
-This is our first homework assign when we had to start from scratch. Using our lectures, activities, and outside resources, we had to create a website with HTML and CSS (maybe Javascript, if we are feeling comfortable with it.)
+
+This was our first homework assigned where we had to start from scratch. By using our lectures, activities, and outside resources, we had to create a website with HTML and CSS (maybe Javascript, if we are feeling comfortable with it.)
 
 ## Motivation
-Besides this project being a homework, I was actually extremely excited to make my own website from scratch. Prior to this class, I had no knowledge in HTML and CSS.
+
+Besides this project being a homework, I was actually extremely excited to make my own website from scratch. Prior to this class, I had no knowledge in HTML and CSS. Just a little bit of Javascript, but barely any Javascript was used in this project.
 
 ## Table of Contents
+
 * [Features](#Features)
 * [Screenshots](#Screenshots)
 * [Code-Example](#Code-Example)
@@ -15,9 +18,9 @@ Besides this project being a homework, I was actually extremely excited to make 
 * [License](#License)
 
 ## Features
+
 This portfolio was mostly done with HTML and CSS, just one Javascript for the "scroll to top" action. No Bootstrap was used, we did not learn that in class. 
-Throughout the entire website, I used a lot of pseudo element (hover, focus, after), and used small transition styles to make the motion look as clean as possible.
-Utilize a good amount of media queries to help my website be more responsive to almost any screen size.
+Throughout the entire website, I used a lot of pseudo elements (hover, focus, after, etc), and used transition/transform styles to make the motion look as clean as possible when resized to different screen size. In which, I utilized a good amount of media queries to fixed any issue with responsiveness.
 
 ## Screenshots
 
@@ -32,6 +35,7 @@ These are iPhone X view:
 ![skills](./images/README-pics/skills.png)
 
 ## Code-Example
+
 I utilized spaces and comments in HTML and CSS to organize and divide the sections up.
 ```
   <!-- ===== Landing Page ===== -->
@@ -54,7 +58,7 @@ I utilized spaces and comments in HTML and CSS to organize and divide the sectio
                     </li>
                 
 ```
-Spaces used for divding up the styles in CSS || Comments used to help indicate the Flexbox Parent
+Spaces used for dividing up the styles in CSS || Comments used to help indicate the Flexbox Parent
 ```
    /* flexbox parent :: img div.aboutInfo */
 .aboutCard {
@@ -82,7 +86,7 @@ Spaces used for divding up the styles in CSS || Comments used to help indicate t
 ```
 
 ## Reference
-These are what I used to help me create my portofolio
+These are websites I used to aid me in learning different techniques within HTML and CSS (and a dash of Javascript).
 > - [CSS-Tricks](https://css-tricks.com/) || Learn most of my CSS from this website.
 > - [Developer Mozilla](https://developer.mozilla.org/en-US/) || Learn most of my tag definitions here.
 > - [W3School](https://www.w3schools.com/) || Learn many tricks (creating a form, hover effect, buttons, etc) here.
@@ -92,10 +96,18 @@ These are what I used to help me create my portofolio
 
 ## Tests/Issues
 I utilized the Chrom Dev Tool to help fix many problems that I had encountered
-- overflow-x: I had some contents, padding, margin, etc that would exceed the actual viewport.
-    - this also conflicted with my Javascript, thus I had to fix the issue with my media queries.
-- layout problems: I initially used CSS Grids for my website, but the CSS grids got more and more complicated, switch to Flexbox
-
+> OVERFLOW-X: HIDDEN;
+- I had issues margin, and padding that would flow outside of the viewport, which lead to a horizontal scrollbar.
+- I initally used this to hid the horizontal bar, this lead to more issues than helping.
+- This also conflicted with my single Javascript, thus instead of using the OVERFLOW-X: HIDDEN, I fixed the issue with Media Queries.
+> Layout problems 
+- I initially used CSS Grids for my website, but the CSS grids got more and more complicated, so switch to Flexbox
+> POSITION: STICKY;
+- While initially attempting to stick my NAVBAR to the top of the screen, it would roll pass it.
+- Did more research and realized, they you need the -web-sticky for compatibility for the Chrome Browser to work.
+> Chrome Dev Tool
+- I did about 90% of my troubleshooting on here to test screen size and CSS codes.
+- Used to help identify limits for my Media Queries.
 
 ## Contribute
 - My class instructor, Calvin
@@ -108,7 +120,7 @@ I utilized the Chrom Dev Tool to help fix many problems that I had encountered
 
 > [Pixel Perfect](https://www.flaticon.com/authors/pixel-perfect), [icon54](https://icon54.com/)
 - My skill section icons are all from this author.
-- Also, they have an excellent website to receive inpiration from.
+- Also, they have an excellent website to receive inspirations from.
 
 > [Wallpaper Flare](https://www.wallpaperflare.com/)
 - This is where I got my background image from, also used for my temporary Project's Image.
