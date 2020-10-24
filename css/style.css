@@ -528,14 +528,14 @@ input[type=submit]:hover {
     display: block;
     
     width: 100%;
-    height:100%;
-    font-size:24px;
-
+    height: 100%;
+    font-size: 24px;
+    
     color: #262626;
-    line-height: calc(60px - 12px);
+    line-height: calc(60px - 12px); /* shaving off some pixels to center the icons to the middle of the background */
     border-radius: 50%;
     
-    background: linear-gradient(0deg, #fff, #ddd);
+    background: linear-gradient(0deg, #fff, #ddd); /* created a background gradient that stacks on top of the anchor background to create a indention effect */
     transition: .5s;
 }
 
