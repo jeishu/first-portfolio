@@ -541,11 +541,9 @@ input[type=submit]:hover {
 
     /* selectors for icons using nth-child */
 .contact ul li:nth-child(1) a:hover .fa {color: grey;}
-.contact ul li:nth-child(2) a:hover .fa {color: #00aced;}
-.contact ul li:nth-child(3) a:hover .fa {color: #1DB954;}
-.contact ul li:nth-child(4) a:hover .fa {color: #007bb6;}
-.contact ul li:nth-child(5) a:hover .fa {color: #e4405f;}
-.contact ul li:nth-child(6) a:hover .fa {color: lightgray;}
+.contact ul li:nth-child(3) a:hover .fa {color: #007bb6;}
+.contact ul li:nth-child(4) a:hover .fa {color: lightgray;}
+.contact ul li:nth-child(2) a:hover .fa {color: #1DB954;}
 
 
 /* Footer Section */
