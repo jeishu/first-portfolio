@@ -110,6 +110,13 @@ These are websites I used to aid me in learning different techniques within HTML
 - I did about 90% of my troubleshooting on here to test screen size and CSS codes.
 - Used to help identify limits for my Media Queries.
 
+## Changes
+
+- 11/12/2020: 
+    * Changed the div tags to anchor tags in the Project Section to lead to the actual wesbite of those projects.
+    * Added images appropriate to the projects.
+    * Changed Name and Title to match the projects.
+
 ## Contribute
 
 - My class instructor, Calvin
