@@ -334,8 +334,10 @@ main section h2 {
     text-align: right;
     padding: 0;
     color: white;
+}
+.projWrapper a {
+    text-decoration: none;
 } 
-
     
 /* project hover */
 .projSection h5,
@@ -351,9 +353,9 @@ main section h2 {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 1rem 3.3rem 0 rgba(0,0,0,1);
 }
     /* images */
-    #p1 {background-image: url("../images/website-pics/p1-image.jpg");}
-    #p2 {background-image: url("../images/website-pics/p2-image.jpg");}
-    #p3 {background-image: url("../images/website-pics/p3-image.jpg");}
+    #p1 {background-image: url("../images/website-pics/project-pw.png");}
+    #p2 {background-image: url("../images/website-pics/project-quiz.png");}
+    #p3 {background-image: url("../images/website-pics/project-wds.png");}
     #p4 {background-image: url("../images/website-pics/p4-image.jpg");}
     #p5 {background-image: url("../images/website-pics/p5-image.jpg");}
     #p6 {background-image: url("../images/website-pics/p6-image.jpg");}
@@ -771,7 +773,7 @@ footer h4 {
     }
     .about img {
         height: auto !important;
-        width: 10rem;
+        width: 8rem;
     }
     .aboutInfo {
         width: 15rem;
